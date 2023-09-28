@@ -1,10 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://bnlrt5ckui1wc"]
 
-[ext_resource type="Texture2D" uid="uid://d0mr2hal6wnfd" path="res://icon.svg" id="1_jrnra"]
 [ext_resource type="Script" path="res://something.gd" id="1_v8i8j"]
+[ext_resource type="Texture2D" uid="uid://bmyqnuedojl7h" path="res://arts/ship.png" id="2_51wha"]
 
 [node name="Something" type="Node2D"]
 script = ExtResource("1_v8i8j")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_jrnra")
+[node name="Player" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture_filter = 3
+texture = ExtResource("2_51wha")
+hframes = 5
+vframes = 2
+frame = 2
