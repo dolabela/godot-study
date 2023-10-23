@@ -5,15 +5,20 @@
 [ext_resource type="Texture2D" uid="uid://bmyqnuedojl7h" path="res://arts/ship.png" id="2_51wha"]
 
 [node name="Something" type="Node2D"]
-position = Vector2(159, 81)
+position = Vector2(0, 1)
 script = ExtResource("1_v8i8j")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("2_5e4yu")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="art" type="Sprite2D" parent="Player"]
 texture_filter = 3
+rotation = 1.5708
 texture = ExtResource("2_51wha")
 hframes = 5
 vframes = 2
 frame = 2
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+enabled = false
+zoom = Vector2(0.7, 0.7)
